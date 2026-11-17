@@ -1,0 +1,308 @@
+GET /api/v1/setores:
+{
+  "content": [
+    {
+      "id": "10000000-0000-0000-0000-000000000001",
+      "nome": "Suporte de Hardware / Infraestrutura",
+      "descricao": "Manutenção física, equipamentos, rede local",
+      "ativo": true
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000002",
+      "nome": "Desenvolvimento / Sistemas",
+      "descricao": "Correção de bugs, ajustes no sistema, falhas técnicas",
+      "ativo": true
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000003",
+      "nome": "Comercial / Produtos",
+      "descricao": "Criação, ativação e desativação de planos e combos",
+      "ativo": true
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000004",
+      "nome": "Suporte Operacional / Administrativo",
+      "descricao": "Auxílio às equipes dos provedores",
+      "ativo": true
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 20,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalElements": 4,
+  "totalPages": 1,
+  "last": true,
+  "size": 20,
+  "number": 0,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
+  },
+  "numberOfElements": 4,
+  "first": true,
+  "empty": false
+}
+Login solicitante: OK
+Chamado aberto:
+{
+  "id": "5287df25-ec32-481f-97eb-03367486e5d9",
+  "numero": "CH-2026-000005",
+  "titulo": "Falha no roteador",
+  "descricao": "Equipamento reinicia durante o atendimento.",
+  "setorId": "10000000-0000-0000-0000-000000000001",
+  "setor": "Suporte de Hardware / Infraestrutura",
+  "categoriaId": "5ebb91f1-a2f8-4401-ae4a-7166d5b44a6c",
+  "categoria": "Equipamentos",
+  "prioridade": "MEDIA",
+  "status": "ABERTO",
+  "solicitanteId": "e9ce6a7a-2997-466d-a155-f49a2db6f3a3",
+  "solicitante": "Solicitante Aurora 1",
+  "provedorId": "3a2aaaa5-9087-4da5-8ef4-3acbccae3ee6",
+  "atendenteId": null,
+  "atendente": null,
+  "previsaoResolucao": null,
+  "observacaoResolucao": null,
+  "criadoEm": "2026-11-17T17:58:27.385270495Z",
+  "assumidoEm": null,
+  "concluidoEm": null,
+  "atualizadoEm": "2026-11-17T17:58:27.385270495Z",
+  "version": 0
+}
+Chamado assumido:
+{
+  "id": "5287df25-ec32-481f-97eb-03367486e5d9",
+  "numero": "CH-2026-000005",
+  "titulo": "Falha no roteador",
+  "descricao": "Equipamento reinicia durante o atendimento.",
+  "setorId": "10000000-0000-0000-0000-000000000001",
+  "setor": "Suporte de Hardware / Infraestrutura",
+  "categoriaId": "5ebb91f1-a2f8-4401-ae4a-7166d5b44a6c",
+  "categoria": "Equipamentos",
+  "prioridade": "MEDIA",
+  "status": "EM_ANDAMENTO",
+  "solicitanteId": "e9ce6a7a-2997-466d-a155-f49a2db6f3a3",
+  "solicitante": "Solicitante Aurora 1",
+  "provedorId": "3a2aaaa5-9087-4da5-8ef4-3acbccae3ee6",
+  "atendenteId": "da06f3ad-b9b8-4913-b492-ff30a0747880",
+  "atendente": "Atendente Suporte de Hardware",
+  "previsaoResolucao": "2026-11-18T17:58:27Z",
+  "observacaoResolucao": null,
+  "criadoEm": "2026-11-17T17:58:27.385270Z",
+  "assumidoEm": "2026-11-17T17:58:27.562953940Z",
+  "concluidoEm": null,
+  "atualizadoEm": "2026-11-17T17:58:27.562959349Z",
+  "version": 1
+}
+Prioridade alterada:
+{
+  "id": "5287df25-ec32-481f-97eb-03367486e5d9",
+  "numero": "CH-2026-000005",
+  "titulo": "Falha no roteador",
+  "descricao": "Equipamento reinicia durante o atendimento.",
+  "setorId": "10000000-0000-0000-0000-000000000001",
+  "setor": "Suporte de Hardware / Infraestrutura",
+  "categoriaId": "5ebb91f1-a2f8-4401-ae4a-7166d5b44a6c",
+  "categoria": "Equipamentos",
+  "prioridade": "ALTA",
+  "status": "EM_ANDAMENTO",
+  "solicitanteId": "e9ce6a7a-2997-466d-a155-f49a2db6f3a3",
+  "solicitante": "Solicitante Aurora 1",
+  "provedorId": "3a2aaaa5-9087-4da5-8ef4-3acbccae3ee6",
+  "atendenteId": "da06f3ad-b9b8-4913-b492-ff30a0747880",
+  "atendente": "Atendente Suporte de Hardware",
+  "previsaoResolucao": "2026-11-18T17:58:27Z",
+  "observacaoResolucao": null,
+  "criadoEm": "2026-11-17T17:58:27.385270Z",
+  "assumidoEm": "2026-11-17T17:58:27.562954Z",
+  "concluidoEm": null,
+  "atualizadoEm": "2026-11-17T17:58:27.601308530Z",
+  "version": 2
+}
+Chamado concluído:
+{
+  "id": "5287df25-ec32-481f-97eb-03367486e5d9",
+  "numero": "CH-2026-000005",
+  "titulo": "Falha no roteador",
+  "descricao": "Equipamento reinicia durante o atendimento.",
+  "setorId": "10000000-0000-0000-0000-000000000001",
+  "setor": "Suporte de Hardware / Infraestrutura",
+  "categoriaId": "5ebb91f1-a2f8-4401-ae4a-7166d5b44a6c",
+  "categoria": "Equipamentos",
+  "prioridade": "ALTA",
+  "status": "CONCLUIDO",
+  "solicitanteId": "e9ce6a7a-2997-466d-a155-f49a2db6f3a3",
+  "solicitante": "Solicitante Aurora 1",
+  "provedorId": "3a2aaaa5-9087-4da5-8ef4-3acbccae3ee6",
+  "atendenteId": "da06f3ad-b9b8-4913-b492-ff30a0747880",
+  "atendente": "Atendente Suporte de Hardware",
+  "previsaoResolucao": "2026-11-18T17:58:27Z",
+  "observacaoResolucao": "Roteador substituído e conexão validada.",
+  "criadoEm": "2026-11-17T17:58:27.385270Z",
+  "assumidoEm": "2026-11-17T17:58:27.562954Z",
+  "concluidoEm": "2026-11-17T17:58:27.633239493Z",
+  "atualizadoEm": "2026-11-17T17:58:27.633239493Z",
+  "version": 3
+}
+Notificações do solicitante:
+{
+  "content": [
+    {
+      "id": "255e8de2-b633-4f6c-8548-9f02f36cf3d0",
+      "chamadoId": "f4c6a617-799b-4df2-8c15-adb265adbb54",
+      "tipoEvento": "CHAMADO_ASSUMIDO",
+      "titulo": "Chamado assumido",
+      "mensagem": "O atendente Atendente Suporte de Hardware assumiu CH-2026-000004. Previsão: 2026-11-18T17:41:43Z.",
+      "lida": false,
+      "criadoEm": "2026-11-17T17:41:43.903938Z"
+    },
+    {
+      "id": "5f39d57e-61a6-4899-b9c2-5d36d8a5fb26",
+      "chamadoId": "f4c6a617-799b-4df2-8c15-adb265adbb54",
+      "tipoEvento": "PRIORIDADE_ALTERADA",
+      "titulo": "Prioridade alterada",
+      "mensagem": "A prioridade de CH-2026-000004 foi alterada para ALTA.",
+      "lida": false,
+      "criadoEm": "2026-11-17T17:41:43.942661Z"
+    },
+    {
+      "id": "0f9cd295-763c-4a40-9ad6-430879543d70",
+      "chamadoId": "f4c6a617-799b-4df2-8c15-adb265adbb54",
+      "tipoEvento": "CHAMADO_CONCLUIDO",
+      "titulo": "Chamado concluído",
+      "mensagem": "O chamado CH-2026-000004 foi concluído: Roteador substituido e conexao validada.",
+      "lida": false,
+      "criadoEm": "2026-11-17T17:41:43.975602Z"
+    },
+    {
+      "id": "e02eeb0c-c3ae-4bbd-8a3f-3da7bb8b8aaf",
+      "chamadoId": "5287df25-ec32-481f-97eb-03367486e5d9",
+      "tipoEvento": "CHAMADO_ASSUMIDO",
+      "titulo": "Chamado assumido",
+      "mensagem": "O atendente Atendente Suporte de Hardware assumiu CH-2026-000005. Previsão: 2026-11-18T17:58:27Z.",
+      "lida": false,
+      "criadoEm": "2026-11-17T17:58:27.564523Z"
+    },
+    {
+      "id": "bcfd9479-c65a-4f2f-8a00-6c4b77bb9dd2",
+      "chamadoId": "5287df25-ec32-481f-97eb-03367486e5d9",
+      "tipoEvento": "PRIORIDADE_ALTERADA",
+      "titulo": "Prioridade alterada",
+      "mensagem": "A prioridade de CH-2026-000005 foi alterada para ALTA.",
+      "lida": false,
+      "criadoEm": "2026-11-17T17:58:27.601889Z"
+    },
+    {
+      "id": "4b452202-5bee-4e3a-8d0f-0835739157d1",
+      "chamadoId": "5287df25-ec32-481f-97eb-03367486e5d9",
+      "tipoEvento": "CHAMADO_CONCLUIDO",
+      "titulo": "Chamado concluído",
+      "mensagem": "O chamado CH-2026-000005 foi concluído: Roteador substituído e conexão validada.",
+      "lida": false,
+      "criadoEm": "2026-11-17T17:58:27.634746Z"
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 20,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalElements": 6,
+  "totalPages": 1,
+  "last": true,
+  "size": 20,
+  "number": 0,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
+  },
+  "numberOfElements": 6,
+  "first": true,
+  "empty": false
+}
+Logs do chamado:
+[
+  {
+    "id": "3b4e49e4-f385-4b02-9fd9-2e6ddf5369ec",
+    "chamadoId": "5287df25-ec32-481f-97eb-03367486e5d9",
+    "tipoEvento": "CRIADO",
+    "autorId": "e9ce6a7a-2997-466d-a155-f49a2db6f3a3",
+    "dados": {
+      "setorId": "10000000-0000-0000-0000-000000000001",
+      "provedorId": "3a2aaaa5-9087-4da5-8ef4-3acbccae3ee6"
+    },
+    "criadoEm": "2026-11-17T17:58:27.392304Z"
+  },
+  {
+    "id": "b5b17f1d-fd28-46f1-b9d9-dd9ffafe3fce",
+    "chamadoId": "5287df25-ec32-481f-97eb-03367486e5d9",
+    "tipoEvento": "ASSUMIDO",
+    "autorId": "da06f3ad-b9b8-4913-b492-ff30a0747880",
+    "dados": {
+      "atendenteId": "da06f3ad-b9b8-4913-b492-ff30a0747880",
+      "previsaoResolucao": "2026-11-18T17:58:27Z"
+    },
+    "criadoEm": "2026-11-17T17:58:27.563098Z"
+  },
+  {
+    "id": "c514b838-403f-4ef4-874e-5b3fb412a46c",
+    "chamadoId": "5287df25-ec32-481f-97eb-03367486e5d9",
+    "tipoEvento": "STATUS_ALTERADO",
+    "autorId": "da06f3ad-b9b8-4913-b492-ff30a0747880",
+    "dados": {
+      "antes": "ABERTO",
+      "depois": "EM_ANDAMENTO"
+    },
+    "criadoEm": "2026-11-17T17:58:27.563898Z"
+  },
+  {
+    "id": "a9ef10c9-8d0d-4a8c-a4f5-cb0e05f6e252",
+    "chamadoId": "5287df25-ec32-481f-97eb-03367486e5d9",
+    "tipoEvento": "PRIORIDADE_ALTERADA",
+    "autorId": "da06f3ad-b9b8-4913-b492-ff30a0747880",
+    "dados": {
+      "antes": "MEDIA",
+      "depois": "ALTA",
+      "motivo": "Impacto para o cliente"
+    },
+    "criadoEm": "2026-11-17T17:58:27.601431Z"
+  },
+  {
+    "id": "e35bdabd-f3d5-4df4-b9e1-b17a677c58a6",
+    "chamadoId": "5287df25-ec32-481f-97eb-03367486e5d9",
+    "tipoEvento": "CONCLUIDO",
+    "autorId": "da06f3ad-b9b8-4913-b492-ff30a0747880",
+    "dados": {
+      "observacaoResolucao": "Roteador substituído e conexão validada."
+    },
+    "criadoEm": "2026-11-17T17:58:27.633996Z"
+  },
+  {
+    "id": "b59ed7a0-b500-4e67-83e4-c7c534da4798",
+    "chamadoId": "5287df25-ec32-481f-97eb-03367486e5d9",
+    "tipoEvento": "STATUS_ALTERADO",
+    "autorId": "da06f3ad-b9b8-4913-b492-ff30a0747880",
+    "dados": {
+      "antes": "EM_ANDAMENTO",
+      "depois": "CONCLUIDO"
+    },
+    "criadoEm": "2026-11-17T17:58:27.634456Z"
+  }
+]
