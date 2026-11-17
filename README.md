@@ -103,3 +103,40 @@ Com JDK 21 e Docker disponíveis:
 ```
 
 O build executa ktlint, testes unitários e testes de integração com PostgreSQL em Testcontainers. Para executar a aplicação localmente fora do Compose, inicialize um PostgreSQL compatível, configure `DB_URL`, `DB_USERNAME` e `DB_PASSWORD`, e use `SPRING_PROFILES_ACTIVE=dev`.
+
+## Deploy no Render + Supabase
+
+Use o **Session Pooler** do Supabase na porta `5432`. A conexão direta exige IPv6 e pode não funcionar no Render; não use o Transaction Pooler na porta `6543`, pois o Flyway precisa de uma conexão de sessão.
+
+O formato da URL JDBC é:
+
+```text
+jdbc:postgresql://aws-0-<regiao>.pooler.supabase.com:5432/postgres?sslmode=require
+```
+
+O nome de usuário do pooler segue o formato `<role>.<project-ref>`. Para isolar os dados da aplicação, crie um papel e um schema dedicados pelo SQL Editor do Supabase:
+
+```sql
+create role central_app login password '...';
+grant central_app to postgres;
+create schema central authorization central_app;
+alter role central_app set search_path = central, extensions;
+grant usage on schema extensions to central_app;
+```
+
+Configure estas variáveis no Render:
+
+| Variável | Valor |
+| --- | --- |
+| `DB_URL` | URL JDBC do Session Pooler, porta `5432`, com `sslmode=require` |
+| `DB_USERNAME` | `central_app.<project-ref>` (ou `<role>.<project-ref>`) |
+| `DB_PASSWORD` | Senha do papel PostgreSQL |
+| `JWT_SECRET` | Segredo aleatório com pelo menos 32 bytes; o Blueprint gera esse valor |
+| `SPRING_PROFILES_ACTIVE` | `dev` somente para demonstração; cria usuários seed com a senha conhecida `Senha123!` |
+| `SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `SMTP_AUTH`, `SMTP_STARTTLS` | Opcionais; configure-os para habilitar e-mail |
+| `MAIL_HEALTH_ENABLED` | `true` somente quando SMTP estiver configurado e disponível; o padrão `false` exclui SMTP da verificação de saúde |
+| `CORS_ALLOWED_ORIGINS` | Origens do frontend separadas por vírgula |
+
+Para criar o serviço pelo Blueprint, selecione **New > Blueprint**, conecte este repositório e aplique o `render.yaml`. Como alternativa, selecione **New > Web Service**, escolha o repositório, Docker como runtime e `/actuator/health` como health check path; defina as variáveis de ambiente acima no painel do Render.
+
+Após o deploy, o Swagger UI fica em `https://<servico>.onrender.com/swagger-ui`. O Docker Compose local continua funcionando sem alterações.
